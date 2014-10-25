@@ -1,4 +1,5 @@
 <?php
+Namespace Classes\Twitter;
 
 /**
  * Twitter-API-PHP : Simple PHP wrapper for the v1.1 API
