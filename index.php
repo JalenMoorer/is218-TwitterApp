@@ -23,7 +23,7 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oau
 //$content = $connection->get('account/verify_credentials');
 
 /* Some example calls */
-//$content = $connection->get('followers/list');
+$content = $connection->get('followers/list');
 //$connection->get('users/show', array('screen_name' => 'KingJalenStatus'));
 //$account = $connection->get('account/verify_credentials');
 //$status = $connection->post('statuses/update', array('status' => 'My first time using twitter is from a school project.  Go figure.', 'in_reply_to_status_id' => 123456));
