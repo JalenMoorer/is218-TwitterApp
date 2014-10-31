@@ -2,21 +2,61 @@
 
 namespace Classes\html;
 
-class htmltable implements htmltableInterface
+class htmltable
 {
-
-	public static function print_html_table($array) //passes an array and outputs the results in html table format
+	public static function print_html_table_timeline($array) //passes an array and outputs the results in html table format
 	{
 		$table_head = TRUE;
-		foreach($array as $items)
+		$length = count($array);
+
+		for($i=0; $i < $length; $i++)
 		{	if($table_head == TRUE)
 			{
-				echo "<table border=\"1\" style=\"width:50%\";>";
+				$string = "<table class=\"table\">";
+				$string .= "<thead>
+							<th>Row</th>
+							<th>Name</th>
+							<th>Tweet</th>
+							";
 				$table_head = FALSE;
 			}
-			echo "<tr>" . "<td> Username</td>" 
-				. "<td>" . $items->screen_name . "</td>" . "</tr>"; 
+			$string .= "
+				<tr>
+				<td>".$i."</td>
+				<td>". $array[$i]->user->name. "</td>
+				<td>" . $array[$i]->text . "</td></tr>"
+				;
 		}
-		echo "</table>";
+
+		$string .= "</table>";
+		return $string;
+	}
+
+		public static function print_html_table_tweets($array) //passes an array and outputs the results in html table format
+	{
+		$table_head = TRUE;
+		$length = count($array);
+
+		for($i=0; $i < $length; $i++)
+		{	if($table_head == TRUE)
+			{
+				$string = "<table class=\"table\">";
+				$string .= "<thead>
+							<th>Row</th>
+							<th>Name</th>
+							<th>Tweet</th>
+							";
+				$table_head = FALSE;
+			}
+			$string .= "
+				<tr>
+				<td>".$i."</td>
+				<td>". $array[$i]->user->name. "</td>
+				<td>" . $array[$i]->text . "</td></tr>"
+				;
+		}
+
+		$string .= "</table>";
+		return $string;
 	}
 }
