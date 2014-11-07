@@ -3,10 +3,12 @@
 class Autoloader { //Autoloader recursively adds and includes php files through any subdirectory under the current one
 
 	static public function autoload($className)
-	{
+	{	echo 'class';
+		echo $className;
 	    $className = ltrim($className, '\\');
 	    $fileName  = '';
 	    $namespace = '';
+
 	    if ($lastNsPos = strripos($className, '\\')) {
 	        $namespace = substr($className, 0, $lastNsPos);
 	        $className = substr($className, $lastNsPos + 1);
@@ -15,7 +17,9 @@ class Autoloader { //Autoloader recursively adds and includes php files through 
 	    $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
 	 
 	    require $fileName;
+	    
 	}
+
 }
 
 

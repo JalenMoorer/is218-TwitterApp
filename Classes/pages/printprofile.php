@@ -1,5 +1,5 @@
 <?php
-
+namespace Classes\pages;
 class printprofile extends mainpage
 {
 	public function ConstructPage()

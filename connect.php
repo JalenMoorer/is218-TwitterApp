@@ -5,6 +5,7 @@
  * Check if consumer token is set and if so send user to get a request token.
  */
 
+
 /**
  * Exit with an error message if the CONSUMER_KEY or CONSUMER_SECRET is not defined.
  */

@@ -1,6 +1,6 @@
 <?php
 
-
+namespace Classes\pages;
 class printtweets extends mainpage{
 	public function ConstructPage()
 	{
