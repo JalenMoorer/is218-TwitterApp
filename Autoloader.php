@@ -3,8 +3,7 @@
 class Autoloader { //Autoloader recursively adds and includes php files through any subdirectory under the current one
 
 	static public function autoload($className)
-	{	echo 'class';
-		echo $className;
+	{	
 	    $className = ltrim($className, '\\');
 	    $fileName  = '';
 	    $namespace = '';

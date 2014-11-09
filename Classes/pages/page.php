@@ -21,10 +21,16 @@ abstract class page
 		//Misc
 		public $Modals;
 		public $SlideShow;
+		public $Twitter;
 
 		function ConstructBasePage(){} 
 		function ConstructPage(){}
-		//function ConstructTwitter(){}
+		function ConstructTwitter(){}
+
+		function __construct($object1, $object2){
+			$this->Twitter = $object2;
+			//print_r($this->Twitter);
+		}
 
 		function ConstructHTML() 
 		{
@@ -36,7 +42,7 @@ abstract class page
 		function __destruct()//Will send and print it to the browser
 		{
 			$this->ConstructMainPage();
-			//$this->ConstructTwitter();
+			$this->ConstructTwitter();
 			$this->ConstructPage();
 			$this->ConstructHTML();
 			echo $this->HTML;

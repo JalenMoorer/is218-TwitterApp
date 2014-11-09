@@ -2,6 +2,7 @@
 namespace Classes\pages;
 	class home extends mainpage
 	{
+
 		function ConstructPage()
 		{	
 			$tweet = "";
@@ -47,8 +48,8 @@ namespace Classes\pages;
 				$tweet = $_POST['tweet'];
 			}
 
-			//$connection = parent::ConstructTwitter();
-			//$connection->post('statuses/update', array('status' => $tweet, 'in_reply_to_status_id' => 123456));
+			$connection = parent::ConstructTwitter();
+			$connection->post('statuses/update', array('status' => $tweet, 'in_reply_to_status_id' => 123456));
 			
 		}
 	}

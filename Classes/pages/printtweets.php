@@ -8,7 +8,7 @@ class printtweets extends mainpage{
 		$content = $connection->get('statuses/user_timeline');
 		//print_r($content);
 		//$this->get($content);
-		$table = Classes\html\htmltable::print_html_table_timeline($content);
+		$table = \Classes\html\htmltable::print_html_table_timeline($content);
 		$this->Section = $table;
 		
 	}
